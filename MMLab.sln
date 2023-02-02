@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterMind", "MasterMind\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterMindLibrary", "MasterMindLibrary\MasterMindLibrary.csproj", "{CAF0EAC8-47AC-4E77-9463-4F0E0921BED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleLib", "..\CSC160\simpleLib\simpleLib.csproj", "{329214B1-8A96-4438-B8F8-94CA28A6486C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{CAF0EAC8-47AC-4E77-9463-4F0E0921BED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAF0EAC8-47AC-4E77-9463-4F0E0921BED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAF0EAC8-47AC-4E77-9463-4F0E0921BED0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{329214B1-8A96-4438-B8F8-94CA28A6486C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{329214B1-8A96-4438-B8F8-94CA28A6486C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{329214B1-8A96-4438-B8F8-94CA28A6486C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{329214B1-8A96-4438-B8F8-94CA28A6486C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

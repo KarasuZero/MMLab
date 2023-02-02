@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CSC160\simpleLib\simpleLib.csproj" />
     <ProjectReference Include="..\MasterMindLibrary\MasterMindLibrary.csproj" />
   </ItemGroup>
 

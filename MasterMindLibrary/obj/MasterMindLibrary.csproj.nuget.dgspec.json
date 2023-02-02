@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kento\\RiderProjects\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj": {}
+    "C:\\Users\\kento\\Desktop\\Codes\\CSC160\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kento\\RiderProjects\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj": {
+    "C:\\Users\\kento\\Desktop\\Codes\\CSC160\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kento\\RiderProjects\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\kento\\Desktop\\Codes\\CSC160\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj",
         "projectName": "MasterMindLibrary",
-        "projectPath": "C:\\Users\\kento\\RiderProjects\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj",
+        "projectPath": "C:\\Users\\kento\\Desktop\\Codes\\CSC160\\MMLab\\MasterMindLibrary\\MasterMindLibrary.csproj",
         "packagesPath": "C:\\Users\\kento\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kento\\RiderProjects\\MMLab\\MasterMindLibrary\\obj\\",
+        "outputPath": "C:\\Users\\kento\\Desktop\\Codes\\CSC160\\MMLab\\MasterMindLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,7 +50,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

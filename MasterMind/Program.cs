@@ -28,22 +28,61 @@ namespace MasterMind
             Console.ResetColor();
 
             //ask for difficulty
+            List<String> difficultyOptions = new List<string>()
+            {
+                "Easy",
+                "Medium",
+                "Hard"
+            };
+
+            int difficulty = MMLib.GetConsoleMenu(difficultyOptions);
 
             //ask for maxTurns of turns to guess it
+            int maxTurns = MMLib.GetConsoleInt("How many turns would you like to guess the answer?", 1, 100);
 
             //store the maxPegs based on difficulty
-
+            int maxPegs = 0;
+            switch (difficulty)
+            {
+                case 1:
+                    maxPegs = 4;
+                    break;
+                case 2:
+                    maxPegs = 6;
+                    break;
+                case 3:
+                    maxPegs = 8;
+                    break;
+            }
             //Generate an answer
+            List<int> answer = MMLib.GenerateAnswer(maxPegs);
 
             //show cheat? 
-            //MMLib.Cheat(answer, pegList);
-
-            //loop while !gameWon && maxTurns != 0
-            //  get user attempt
-            //  Check the attempt for a correct guess
-            //  add the attempt to the attempt list
-            //  determin if the game has been won or not
-            //  reduce the maxTurns
+            switch (MMLib.GetConsoleMenu(new List<string>() { "Yes", "No" }))
+            {
+                case 1:
+                        MMLib.Cheat(answer, pegList);
+                        break;
+                case 2:
+                        break;
+                
+            }
+            
+            bool gameWon = false;
+            while (!gameWon && maxTurns != 0)
+            {
+                //get user attempt
+                Attempt attempt = GetAttemptFromUser(maxPegs, allAttempts, maxTurns);
+                //Check the attempt for a correct guess
+                CheckAttempt(attempt, answer);
+                //add the attempt to the attempt list
+                allAttempts.Add(attempt);
+                //determin if the game has been won or not
+                gameWon = attempt.CorrectAnswerCount == maxPegs;
+                //reduce the maxTurns
+                maxTurns--;
+            }
+            
 
             //If won, display Game Won!
             //If lost, show game loss
@@ -53,17 +92,36 @@ namespace MasterMind
         static Attempt GetAttemptFromUser(int maxPegs, List<Attempt> allAttempts, int maxTurns)
         {
             //Create a new Attempt
-            //Get color options based on maxPegs
-            //Loop of # of pegs they need to choose
-            //      clear console
-            //      Display # of attempts left
-            //      Show all previous attempts
-            //      Show pegs they have chosen already in this attempt
-            //      Ask them to pick a peg color from a menu of options
-            //      Add the chosen peg to the Attempt.AttemptList
-            //Return the attempt when done
-
             Attempt attempt = new Attempt();
+            
+            //Get color options based on maxPegs
+            List<String> colorOptions = new List<string>();
+            for (int i = 0; i < maxPegs; i++)
+            {
+                colorOptions.Add(pegList[i].PegColor.ToString());
+            }
+            
+            //Loop through the maxPegs
+            for (int i = 0; i < maxPegs; i++)
+            {
+                //      clear console
+                Console.Clear();
+                
+                //      Display # of attempts left
+                Console.WriteLine($"You have {maxTurns} attempts left.");
+                
+                //      Show all previous attempts
+                foreach (Attempt a in allAttempts)
+                {
+                    Console.WriteLine($"Attempt: {a.AttemptList.Count} Correct: {a.CorrectAnswerCount}");
+                }
+                
+                //      Show pegs they have chosen already in this attempt
+                //      Ask them to pick a peg color from a menu of options
+                //      Add the chosen peg to the Attempt.AttemptList
+            }
+            
+            //Return the attempt when done
 
             return attempt;
         }
